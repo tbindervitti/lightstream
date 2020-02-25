@@ -1,0 +1,13 @@
+{
+  "name": "happybirthday",
+  "version": "1.0.0",
+  "description": "sing happy birthday",
+  "bin": {
+    "happybirthday": "bin/happybirthday"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}

@@ -1,0 +1,18 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: configupdate
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: configupdate
+            image: localhost:5000/updateconfig
+            args:
+            - /bin/sh
+            - -c
+            - date; echo Config Update running now
+          restartPolicy: OnFailure
